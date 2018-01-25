@@ -2,16 +2,15 @@ package Login;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
-import java.awt.GridBagLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import java.awt.EventQueue;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -72,14 +71,55 @@ public class Authorize extends JFrame implements ActionListener
 		sign_in_btn.addActionListener(this); // attach a listener for the sign-in button
 	}
 	
-	/* Implementing the method for sign in button */
-	static String user_input;
-	static String passw_input;
 	
+	/* Implementing the method for sign in button */
 	public void actionPerformed(ActionEvent e)
     {
-            user_input =username_textfield.getText().trim();
-            passw_input= password_textfield.getText().trim(); 
+          
+            /* Create a connection with our database
+    		 *  Fetch the saved Username and Password 
+    		 *  */
+    		try
+    		{
+    			 Class.forName("com.mysql.jdbc.Driver").newInstance(); //instance of JDBC
+    		
+    			 String conn_url="jdbc:mysql://127.0.0.1:3306/jdbc_login"; // URL connection using our IP and DB
+    		
+    			 String username="root"; // our DB_Username
+    			 String pass="test123"; // our DB_Password
+    		
+    			 Connection conn=DriverManager.getConnection(conn_url,username,pass); // Sign in DB using the DB_Credentials
+    			 
+    			 String  user_input =username_textfield.getText().trim();
+    	         String passw_input= password_textfield.getText().trim(); 
+    	          
+    	         /* prepare the query and statement */
+    	         String query="select * from credentials where Username=? and Password=?";
+    	         PreparedStatement statement=conn.prepareStatement(query);
+    	         statement.setString(1,user_input);
+    	         statement.setString(2,passw_input);
+    	         
+    	         ResultSet rs=statement.executeQuery(); // execute the query
+    	         	 
+    				if(rs.next())
+    				{
+    					 dispose();
+    					 gui_test main_menu=new gui_test();
+    					 gui_test.main(null);
+    					
+    				}
+    				else
+    				{
+    					JOptionPane.showMessageDialog(null,"Wrong UserName or Password");
+    				}
+    			
+    			
+    		}
+    		catch(ClassNotFoundException |SQLException | InstantiationException | IllegalAccessException e1)
+    		{
+    			e1.printStackTrace();
+    		}
+    		
     }
 
 	public static void main(String[] args) 
@@ -100,50 +140,6 @@ public class Authorize extends JFrame implements ActionListener
 			}
 		});
 	
-		/* Create a connection with our database
-		 *  Fetch the saved UserName and Password 
-		 *  */
-		try
-		{
-			 Class.forName("com.mysql.jdbc.Driver").newInstance(); //instance of JDBC
-		
-			 String conn_url="jdbc:mysql://127.0.0.1:3306/jdbc_login"; // URL connection using our IP and DB
-		
-			 String username="root"; // our DB_Username
-			 String pass="test123"; // our DB_Password
-		
-			 Connection conn=DriverManager.getConnection(conn_url,username,pass); // Sign in DB using the DB_Credentials
-		
-			 Statement stmt=conn.createStatement(); // making a statement for DB
-			 ResultSet rs=stmt.executeQuery("select * from credentials"); // execute the query
-			
-			 
-			 String user = null;
-			 String passw=null;
-			 	 
-			 while(rs.next())
-			 {	
-				user=rs.getString("Username"); // fetch username from db
-				passw=rs.getString("Password"); // fetch password from db
-				//System.out.println("ID:" +id+ "User:"+ user+ "Pass:"+ passw);		
-			 }
-				if(user.equals(user_input) && passw.equals(passw_input))
-				{
-					 new gui_test();
-				}
-				else
-				{
-					//Credential_Info.setText("Wrong UserName or Password");
-					System.out.println("wrong cred");
-				}
-			
-			
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		
 	} // end of main
 
 } //end of class
