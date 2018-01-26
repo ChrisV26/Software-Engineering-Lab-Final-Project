@@ -5,27 +5,22 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JTextField;
-
-import gui.gui_test;
-
+import gui.GUI;
 import javax.swing.JButton;
-import java.awt.Toolkit;
-import javax.swing.ImageIcon;
 import java.awt.Font;
 
 
 public class Authorize extends JFrame implements ActionListener
 {
+	
+
 	protected static final Object sign_in_btn = null;
 	protected JTextField username_textfield;
 	protected JTextField password_textfield;
@@ -34,7 +29,6 @@ public class Authorize extends JFrame implements ActionListener
 	public Authorize() 
 	{
 		setTitle("Login");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Authorize.class.getResource("/selfp/box_PNG49.png")));
 		setBounds(100, 100, 300, 200);
 		setResizable(false);
 		getContentPane().setLayout(null);
@@ -64,7 +58,6 @@ public class Authorize extends JFrame implements ActionListener
 		getContentPane().add(sign_in_btn);
 		
 		JLabel Credential_Info = new JLabel("");
-		Credential_Info.setIcon(new ImageIcon(Authorize.class.getResource("/selfp/box.jpg")));
 		Credential_Info.setBounds(0, 0, 300, 200);
 		getContentPane().add(Credential_Info);
 		
@@ -104,8 +97,8 @@ public class Authorize extends JFrame implements ActionListener
     				if(rs.next())
     				{
     					 dispose();
-    					 gui_test main_menu=new gui_test();
-    					 gui_test.main(null);
+    					GUI main_menu=new GUI();
+    					GUI.main(null);
     					
     				}
     				else
