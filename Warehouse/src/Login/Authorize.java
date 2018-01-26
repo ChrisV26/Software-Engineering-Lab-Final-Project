@@ -34,7 +34,7 @@ public class Authorize extends JFrame implements ActionListener
 	public Authorize() 
 	{
 		setTitle("Login");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Giaro\\Desktop\\SELF-Project\\Software-Engineering-Lab-Final-Project\\Warehouse\\src\\selfp\\box_PNG49.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Authorize.class.getResource("/selfp/box_PNG49.png")));
 		setBounds(100, 100, 300, 200);
 		setResizable(false);
 		getContentPane().setLayout(null);
@@ -64,7 +64,7 @@ public class Authorize extends JFrame implements ActionListener
 		getContentPane().add(sign_in_btn);
 		
 		JLabel Credential_Info = new JLabel("");
-		Credential_Info.setIcon(new ImageIcon("C:\\Users\\Giaro\\Desktop\\SELF-Project\\Software-Engineering-Lab-Final-Project\\Warehouse\\src\\selfp\\box.jpg"));
+		Credential_Info.setIcon(new ImageIcon(Authorize.class.getResource("/selfp/box.jpg")));
 		Credential_Info.setBounds(0, 0, 300, 200);
 		getContentPane().add(Credential_Info);
 		

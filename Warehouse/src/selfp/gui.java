@@ -62,7 +62,7 @@ public class gui extends JFrame {
 	}
 	
 	public gui() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Giaro\\Desktop\\SELF-Project\\testing\\box_PNG49.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(gui.class.getResource("/selfp/box_PNG49.png")));
 		setResizable(false);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -143,7 +143,7 @@ public class gui extends JFrame {
 		btnSearch.setBounds(450, 52, 100, 30);
 		contentPane.add(btnSearch);
 		JLabel image = new JLabel("");
-		image.setIcon(new ImageIcon("C:\\Users\\Giaro\\Desktop\\SELF-Project\\testing\\box.jpg"));
+		image.setIcon(new ImageIcon(gui.class.getResource("/selfp/box.jpg")));
 		image.setBounds(0, 0, 794, 550);
 		contentPane.add(image);
 	
