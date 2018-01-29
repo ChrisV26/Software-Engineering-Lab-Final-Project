@@ -2,17 +2,14 @@ package gui;
 
 import java.awt.Color;
 import java.awt.EventQueue;
-import java.awt.Font;
-import java.awt.Toolkit;
+import java.awt.Font; // NOPMD by Chris on 27/1/2018 10:19 μμ
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javax.swing.ImageIcon;
+import java.sql.SQLException; // NOPMD by Chris on 27/1/2018 10:19 μμ
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,11 +21,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import Login.ConnectionManager;
+
 import javax.swing.JTextArea;
 
 @SuppressWarnings({ "serial", "unused" })
 public class GUI extends JFrame {
-	
+	private Connection conn = null;
 	private JPanel contentPane;
 	private JTextField txtName;
 	private JTextField txtID;
@@ -98,10 +98,15 @@ public class GUI extends JFrame {
 		btnNew.setBounds(10, 474, 100, 40);
 		contentPane.add(btnNew);
 		
-		JButton btnSave = new JButton("Save");
-		btnSave.setBounds(120, 474, 100, 40);
-		contentPane.add(btnSave);
-		
+		JButton Clear = new JButton("Clear");
+		Clear.setBounds(120, 474, 100, 40);
+		contentPane.add(Clear);
+		Clear.addActionListener(new ActionListener(){
+					public void actionPerformed(ActionEvent e) 
+					{
+						textArea.setText(""); // clearing the textArea in scrollPanel
+					}
+		});		
 		JButton btnStats = new JButton("Stats");
 		btnStats.setBounds(230, 474, 100, 40);
 		contentPane.add(btnStats);
@@ -109,15 +114,7 @@ public class GUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try
 				{
-					Class.forName("com.mysql.jdbc.Driver").newInstance(); //instance of JDBC
-		    		
-					String conn_url="jdbc:mysql://127.0.0.1:3306/jdbc_login"; // URL connection using our IP and DB
-    		
-					String username="root"; // our DB_Username
-					String pass="test123"; // our DB_Password
-    		
-					Connection conn=DriverManager.getConnection(conn_url,username,pass); // Sign in DB using the DB_Credentials
-    			     			     			    	     
+					conn = ConnectionManager.getConnection();
 					/* prepare the search query and statement */
 					String search_query="select * from warehouse_stock";
 					PreparedStatement statement=conn.prepareStatement(search_query);
@@ -136,7 +133,7 @@ public class GUI extends JFrame {
     			   			     			 
 				}
 				
-				catch(ClassNotFoundException |SQLException | InstantiationException | IllegalAccessException e1)
+				catch(SQLException e1)
 				{
 					e1.printStackTrace();
 				}
@@ -173,17 +170,8 @@ public class GUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try
 				{
-				 Class.forName("com.mysql.jdbc.Driver").newInstance(); //instance of JDBC
-		    		
-    			 String conn_url="jdbc:mysql://127.0.0.1:3306/jdbc_login"; // URL connection using our IP and DB
-    		
-    			 String username="root"; // our DB_Username
-    			 String pass="test123"; // our DB_Password
-    		
-    			 Connection conn=DriverManager.getConnection(conn_url,username,pass); // Sign in DB using the DB_Credentials
-    			 
-    			 
-    			 String  name_input =txtName.getText().trim(); // retrieve product name from name input
+				 conn = ConnectionManager.getConnection();
+    			 String name_input =txtName.getText().trim(); // retrieve product name from name input
     	         int id_input=Integer.parseInt(txtID.getText().trim()); // retrieve id from id input
     	         
     			  /* prepare the search query and statement */
@@ -209,13 +197,13 @@ public class GUI extends JFrame {
     			 
 				}
 				
-				catch(ClassNotFoundException |SQLException | InstantiationException | IllegalAccessException e1)
+				catch(SQLException e1)
 				{
 					e1.printStackTrace();
 				}
 			}
 		});
-	
-	}	
-}
+		
+	} //end of constructor GUI	
+} // end of class
 

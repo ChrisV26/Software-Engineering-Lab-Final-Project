@@ -1,0 +1,179 @@
+src/Login/Authorize.java:1:	Package name contains upper case characters
+src/Login/Authorize.java:20:	headerCommentRequirement Required
+src/Login/Authorize.java:24:	Variables that are final and static should be all capitals, 'sign_in_btn' is not all capitals.
+src/Login/Authorize.java:24:	fieldCommentRequirement Required
+src/Login/Authorize.java:25:	Avoid excessively long variable names like username_textfield
+src/Login/Authorize.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Login/Authorize.java:25:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'username_textfield' is not final.
+src/Login/Authorize.java:25:	fieldCommentRequirement Required
+src/Login/Authorize.java:26:	Avoid excessively long variable names like password_textfield
+src/Login/Authorize.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Login/Authorize.java:26:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'password_textfield' is not final.
+src/Login/Authorize.java:26:	fieldCommentRequirement Required
+src/Login/Authorize.java:29:	It is a good practice to call super() in a constructor
+src/Login/Authorize.java:29:	publicMethodCommentRequirement Required
+src/Login/Authorize.java:36:	Local variable 'username_label' could be declared final
+src/Login/Authorize.java:36:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'username_label' is not final.
+src/Login/Authorize.java:46:	Local variable 'password_label' could be declared final
+src/Login/Authorize.java:46:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'password_label' is not final.
+src/Login/Authorize.java:56:	Local variable 'sign_in_btn' could be declared final
+src/Login/Authorize.java:56:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'sign_in_btn' is not final.
+src/Login/Authorize.java:60:	Local variable 'Credential_Info' could be declared final
+src/Login/Authorize.java:60:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'Credential_Info' is not final.
+src/Login/Authorize.java:60:	Variables should start with a lowercase character, 'Credential_Info' starts with uppercase character.
+src/Login/Authorize.java:69:	Avoid variables with short names like e
+src/Login/Authorize.java:69:	Parameter 'e' is not assigned and could be declared final
+src/Login/Authorize.java:69:	publicMethodCommentRequirement Required
+src/Login/Authorize.java:77:	Potential violation of Law of Demeter (method chain calls)
+src/Login/Authorize.java:79:	Local variable 'conn_url' could be declared final
+src/Login/Authorize.java:79:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'conn_url' is not final.
+src/Login/Authorize.java:81:	Local variable 'username' could be declared final
+src/Login/Authorize.java:82:	Local variable 'pass' could be declared final
+src/Login/Authorize.java:84:	Ensure that resources like this Connection object are closed after use
+src/Login/Authorize.java:84:	Local variable 'conn' could be declared final
+src/Login/Authorize.java:86:	Local variable 'user_input' could be declared final
+src/Login/Authorize.java:86:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'user_input' is not final.
+src/Login/Authorize.java:86:	Potential violation of Law of Demeter (method chain calls)
+src/Login/Authorize.java:87:	Local variable 'passw_input' could be declared final
+src/Login/Authorize.java:87:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'passw_input' is not final.
+src/Login/Authorize.java:87:	Potential violation of Law of Demeter (method chain calls)
+src/Login/Authorize.java:90:	Local variable 'query' could be declared final
+src/Login/Authorize.java:91:	Local variable 'statement' could be declared final
+src/Login/Authorize.java:91:	Potential violation of Law of Demeter (object not created locally)
+src/Login/Authorize.java:92:	Potential violation of Law of Demeter (object not created locally)
+src/Login/Authorize.java:93:	Potential violation of Law of Demeter (object not created locally)
+src/Login/Authorize.java:95:	Avoid variables with short names like rs
+src/Login/Authorize.java:95:	Ensure that resources like this ResultSet object are closed after use
+src/Login/Authorize.java:95:	Local variable 'rs' could be declared final
+src/Login/Authorize.java:95:	Potential violation of Law of Demeter (object not created locally)
+src/Login/Authorize.java:97:	Potential violation of Law of Demeter (object not created locally)
+src/Login/Authorize.java:100:	Avoid unused local variables such as 'main_menu'.
+src/Login/Authorize.java:100:	Found 'DU'-anomaly for variable 'main_menu' (lines '100'-'115').
+src/Login/Authorize.java:100:	Local variable 'main_menu' could be declared final
+src/Login/Authorize.java:100:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'main_menu' is not final.
+src/Login/Authorize.java:112:	Avoid printStackTrace(); use a logger call instead.
+src/Login/Authorize.java:117:	Parameter 'args' is not assigned and could be declared final
+src/Login/Authorize.java:117:	publicMethodCommentRequirement Required
+src/Login/Authorize.java:120:	To be compliant to J2EE, a webapp should not use any thread.
+src/Login/Authorize.java:121:	publicMethodCommentRequirement Required
+src/Login/Authorize.java:125:	Local variable 'frame' could be declared final
+src/Login/Authorize.java:128:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/Login/Authorize.java:130:	Avoid printStackTrace(); use a logger call instead.
+src/gui/GUI.java:6:	Avoid unused imports such as 'java.awt.Toolkit'
+src/gui/GUI.java:15:	Avoid unused imports such as 'javax.swing.ImageIcon'
+src/gui/GUI.java:28:	Avoid unused imports such as 'Login.Authorize'
+src/gui/GUI.java:33:	Avoid short class names like GUI
+src/gui/GUI.java:33:	headerCommentRequirement Required
+src/gui/GUI.java:35:	Perhaps 'contentPane' could be replaced by a local variable.
+src/gui/GUI.java:35:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/gui/GUI.java:35:	fieldCommentRequirement Required
+src/gui/GUI.java:36:	Private field 'txtName' could be made final; it is only initialized in the declaration or constructor.
+src/gui/GUI.java:36:	fieldCommentRequirement Required
+src/gui/GUI.java:37:	Private field 'txtID' could be made final; it is only initialized in the declaration or constructor.
+src/gui/GUI.java:37:	fieldCommentRequirement Required
+src/gui/GUI.java:39:	Parameter 'args' is not assigned and could be declared final
+src/gui/GUI.java:39:	publicMethodCommentRequirement Required
+src/gui/GUI.java:40:	To be compliant to J2EE, a webapp should not use any thread.
+src/gui/GUI.java:41:	publicMethodCommentRequirement Required
+src/gui/GUI.java:43:	Local variable 'frame' could be declared final
+src/gui/GUI.java:45:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/gui/GUI.java:46:	Avoid printStackTrace(); use a logger call instead.
+src/gui/GUI.java:52:	It is a good practice to call super() in a constructor
+src/gui/GUI.java:52:	publicMethodCommentRequirement Required
+src/gui/GUI.java:57:	Local variable 'menuBar' could be declared final
+src/gui/GUI.java:60:	Local variable 'mnNew' could be declared final
+src/gui/GUI.java:63:	Local variable 'mntmNew' could be declared final
+src/gui/GUI.java:66:	Local variable 'mntmSave' could be declared final
+src/gui/GUI.java:69:	Local variable 'mntmExit' could be declared final
+src/gui/GUI.java:72:	Avoid variables with short names like e
+src/gui/GUI.java:72:	Parameter 'e' is not assigned and could be declared final
+src/gui/GUI.java:72:	publicMethodCommentRequirement Required
+src/gui/GUI.java:73:	System.exit() should not be used in J2EE/JEE apps
+src/gui/GUI.java:82:	Local variable 'Name' could be declared final
+src/gui/GUI.java:82:	Variables should start with a lowercase character, 'Name' starts with uppercase character.
+src/gui/GUI.java:87:	Avoid variables with short names like ID
+src/gui/GUI.java:87:	Local variable 'ID' could be declared final
+src/gui/GUI.java:87:	Variables should start with a lowercase character, 'ID' starts with uppercase character.
+src/gui/GUI.java:92:	Local variable 'scrollPane' could be declared final
+src/gui/GUI.java:96:	Local variable 'textArea' could be declared final
+src/gui/GUI.java:99:	Local variable 'btnNew' could be declared final
+src/gui/GUI.java:104:	Local variable 'btnSave' could be declared final
+src/gui/GUI.java:108:	Local variable 'btnStats' could be declared final
+src/gui/GUI.java:112:	Avoid variables with short names like e
+src/gui/GUI.java:112:	Parameter 'e' is not assigned and could be declared final
+src/gui/GUI.java:112:	publicMethodCommentRequirement Required
+src/gui/GUI.java:115:	Potential violation of Law of Demeter (method chain calls)
+src/gui/GUI.java:117:	Local variable 'conn_url' could be declared final
+src/gui/GUI.java:117:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'conn_url' is not final.
+src/gui/GUI.java:119:	Local variable 'username' could be declared final
+src/gui/GUI.java:120:	Local variable 'pass' could be declared final
+src/gui/GUI.java:122:	Ensure that resources like this Connection object are closed after use
+src/gui/GUI.java:122:	Local variable 'conn' could be declared final
+src/gui/GUI.java:125:	Local variable 'search_query' could be declared final
+src/gui/GUI.java:125:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'search_query' is not final.
+src/gui/GUI.java:126:	Local variable 'statement' could be declared final
+src/gui/GUI.java:126:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:128:	Avoid variables with short names like rs
+src/gui/GUI.java:128:	Ensure that resources like this ResultSet object are closed after use
+src/gui/GUI.java:128:	Local variable 'rs' could be declared final
+src/gui/GUI.java:128:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:130:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:133:	Avoid variables with short names like id
+src/gui/GUI.java:133:	Local variable 'id' could be declared final
+src/gui/GUI.java:133:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:134:	Local variable 'product_name' could be declared final
+src/gui/GUI.java:134:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'product_name' is not final.
+src/gui/GUI.java:134:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:135:	Local variable 'product_stock' could be declared final
+src/gui/GUI.java:135:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'product_stock' is not final.
+src/gui/GUI.java:135:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:136:	Local variable 'stats' could be declared final
+src/gui/GUI.java:136:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:144:	Avoid printStackTrace(); use a logger call instead.
+src/gui/GUI.java:149:	Local variable 'btnExit' could be declared final
+src/gui/GUI.java:151:	Avoid variables with short names like e
+src/gui/GUI.java:151:	Parameter 'e' is not assigned and could be declared final
+src/gui/GUI.java:151:	publicMethodCommentRequirement Required
+src/gui/GUI.java:152:	System.exit() should not be used in J2EE/JEE apps
+src/gui/GUI.java:168:	Local variable 'btnSearch' could be declared final
+src/gui/GUI.java:171:	Local variable 'image' could be declared final
+src/gui/GUI.java:176:	Avoid variables with short names like e
+src/gui/GUI.java:176:	Parameter 'e' is not assigned and could be declared final
+src/gui/GUI.java:176:	publicMethodCommentRequirement Required
+src/gui/GUI.java:179:	Potential violation of Law of Demeter (method chain calls)
+src/gui/GUI.java:181:	Local variable 'conn_url' could be declared final
+src/gui/GUI.java:181:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'conn_url' is not final.
+src/gui/GUI.java:183:	Local variable 'username' could be declared final
+src/gui/GUI.java:184:	Local variable 'pass' could be declared final
+src/gui/GUI.java:186:	Ensure that resources like this Connection object are closed after use
+src/gui/GUI.java:186:	Local variable 'conn' could be declared final
+src/gui/GUI.java:189:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/gui/GUI.java:189:	Local variable 'name_input' could be declared final
+src/gui/GUI.java:189:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'name_input' is not final.
+src/gui/GUI.java:189:	Potential violation of Law of Demeter (method chain calls)
+src/gui/GUI.java:190:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/gui/GUI.java:190:	Local variable 'id_input' could be declared final
+src/gui/GUI.java:190:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'id_input' is not final.
+src/gui/GUI.java:190:	Potential violation of Law of Demeter (method chain calls)
+src/gui/GUI.java:190:	Potential violation of Law of Demeter (method chain calls)
+src/gui/GUI.java:193:	Local variable 'search_query' could be declared final
+src/gui/GUI.java:193:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'search_query' is not final.
+src/gui/GUI.java:194:	Local variable 'statement' could be declared final
+src/gui/GUI.java:194:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:195:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:196:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:198:	Avoid variables with short names like rs
+src/gui/GUI.java:198:	Ensure that resources like this ResultSet object are closed after use
+src/gui/GUI.java:198:	Local variable 'rs' could be declared final
+src/gui/GUI.java:198:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:200:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:203:	Avoid variables with short names like id
+src/gui/GUI.java:203:	Local variable 'id' could be declared final
+src/gui/GUI.java:203:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:204:	Local variable 'product_name' could be declared final
+src/gui/GUI.java:204:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'product_name' is not final.
+src/gui/GUI.java:204:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:205:	Local variable 'product_stock' could be declared final
+src/gui/GUI.java:205:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'product_stock' is not final.
+src/gui/GUI.java:205:	Potential violation of Law of Demeter (object not created locally)
+src/gui/GUI.java:217:	Avoid printStackTrace(); use a logger call instead.
